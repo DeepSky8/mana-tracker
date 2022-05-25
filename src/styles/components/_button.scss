@@ -1,7 +1,7 @@
 .button--landPacks {
-    background: lighten($light-brown, 5%);
+    background: $light-green;
     border: none;
-    border-bottom: .6rem solid darken($light-brown, 10%);
+    border-bottom: .6rem solid darken($light-green, 10%);
     font-weight: bold;
     margin: $s-size;
     padding: $s-size;

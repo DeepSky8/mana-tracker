@@ -13,7 +13,10 @@ function App() {
 
   return (
     <div>
-      <Header dispatchManaState={dispatchManaState} />
+      <Header
+        manaState={manaState}
+        dispatchManaState={dispatchManaState}
+      />
       <div className="content-container">
         <div className='mainBodyDiv'>
 

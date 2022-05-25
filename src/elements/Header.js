@@ -1,7 +1,7 @@
 import React from "react";
 import { newGame } from '../actions/manaStateActions';
 
-const Header = ({ dispatchManaState }) => (
+const Header = ({ manaState, dispatchManaState }) => (
     <div className="header">
         <div className="content-container">
             <div className="header--spacing">
@@ -12,6 +12,7 @@ const Header = ({ dispatchManaState }) => (
 
                 <div>
                     <button
+                    disabled={!manaState.boxSelected}
                         className="button--new"
                         onClick={() => {
                             dispatchManaState(newGame())

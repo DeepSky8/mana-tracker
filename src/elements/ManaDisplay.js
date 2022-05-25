@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
-import ManaButton from "./ManaButton";
-import { playMana, tapMana } from "../actions/manaStateActions";
-import { manaList } from "../info/manaInfo";
+import React from "react";
 import UnplayedMana from "./UnplayedMana";
 import AvailableMana from "./AvailableMana";
 import TappedMana from "./TappedMana";
-// import {mtgFavIcon} from '../../public/images/'
-
 
 const ManaDisplay = ({ manaState, dispatchManaState }) => {
 
