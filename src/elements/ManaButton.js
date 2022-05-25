@@ -4,11 +4,11 @@ import { imageArray } from "../info/manaInfo";
 const ManaButton = ({ takeAction, display, disabled }) => (
     <>
         <button
+            className="mana--button"
             disabled={disabled}
             onClick={takeAction}
         >
             <img
-                className="manaButton"
                 src={imageArray[display]}
                 height={50}
                 width={50}

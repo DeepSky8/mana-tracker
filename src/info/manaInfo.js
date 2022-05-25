@@ -3,6 +3,16 @@ import blue from '../../src/images/1.png'
 import black from '../../src/images/2.png'
 import red from '../../src/images/3.png'
 import green from '../../src/images/4.png'
+import azorius from '../../src/images/Azorius.png'
+import dimir from '../../src/images/Dimir.png'
+import rakdos from '../../src/images/Rakdos.png'
+import selesnya from '../../src/images/Selesnya.png'
+import orzhov from '../../src/images/Orzhov.png'
+import izzet from '../../src/images/Izzet.png'
+import simic from '../../src/images/Simic.png'
+import golgari from '../../src/images/Golgari.png'
+import gruul from '../../src/images/Gruul.png'
+import boros from '../../src/images/Boros.png'
 
 export const allyBoxMana = [
     0, 1, 2, 3, 4, 10, 11, 12, 13, 14
@@ -43,6 +53,18 @@ export const imageArray = [
     black,
     red,
     green,
+    azorius,
+    dimir,
+    rakdos,
+    gruul,
+    selesnya,
+    izzet,
+    simic,
+    golgari,
+    orzhov,
+    boros
+
+
 ]
 
 export const manaList = [

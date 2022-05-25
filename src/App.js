@@ -12,10 +12,6 @@ import ManaPackType from './elements/ManaPackType';
 function App() {
   const [manaState, dispatchManaState] = useReducer(manaReducer, defaultManaState)
 
-  // useEffect(() => {
-  //   console.log('manaState: ', manaState)
-  // }, [manaState])
-
   return (
     <div>
 
