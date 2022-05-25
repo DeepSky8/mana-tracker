@@ -41,5 +41,3 @@ const ManaDisplay = ({ manaState, dispatchManaState }) => {
 }
 
 export default ManaDisplay
-
-// manaList.indexOf(mana)

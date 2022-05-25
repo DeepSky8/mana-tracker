@@ -19,6 +19,3 @@ const ManaButton = ({ takeAction, display, disabled }) => (
 )
 
 export default ManaButton
-
-// height={50}
-// width={50}

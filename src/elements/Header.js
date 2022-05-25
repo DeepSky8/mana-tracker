@@ -29,5 +29,3 @@ const Header = ({ dispatchManaState }) => (
 )
 
 export default Header
-
-//  background-color: rgb(95, 81, 64);

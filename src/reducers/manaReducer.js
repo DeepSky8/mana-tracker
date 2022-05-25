@@ -1,4 +1,4 @@
-import { allyBoxMana, allyShockBox, enemyBoxMana, enemyShockBox, shockMana, tappedPackMana, untappedMana, untappedPackMana } from "../info/manaInfo"
+import { allyBoxMana, allyShockBox, enemyBoxMana, enemyShockBox, shockMana, tappedPackMana, untappedPackMana } from "../info/manaInfo"
 
 export const defaultManaState = {
     boxSelected: false,
@@ -118,25 +118,3 @@ export const manaReducer = (state, action) => {
         default: return state
     }
 }
-
-
-const manaList = [
-    'w',
-    'u',
-    'b',
-    'r',
-    'g',
-    // 5
-    'wu',
-    'wb',
-    'wr',
-    'wg',
-    'ub',
-    // 10
-    'ur',
-    'ug',
-    'br',
-    'bg',
-    'rg'
-]
-
