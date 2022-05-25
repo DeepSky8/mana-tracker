@@ -1,60 +1,87 @@
 import React from "react";
-import { loadAllyMana, loadAllyShockMana, loadEnemyMana, loadEnemyShockMana, loadMonoMana } from "../actions/manaStateActions";
+import { loadAllShocks, loadAllyMana, loadAllyShockMana, loadEnemyMana, loadEnemyShockMana, loadMonoMana } from "../actions/manaStateActions";
 
 const ManaPackType = ({ dispatchManaState }) => {
 
     return (
-        <div>
-            <button
-                onClick={() => {
-                    dispatchManaState(
-                        loadAllyMana()
-                    )
-                }}
-            >
-                Ally Tap Lands (default)
-            </button>
+        <div className='manaPackContainer'>
+            <div>
 
 
-            <button
-                onClick={() => {
-                    dispatchManaState(
-                        loadEnemyMana()
-                    )
-                }}
-            >
-                Enemy Tap Lands
-            </button>
+                <div className="navigation--spacing">
+                    <button
+                        className="button--landPacks"
+                        onClick={() => {
+                            dispatchManaState(
+                                loadAllyMana()
+                            )
+                        }}
+                    >
+                        Ally Tap Lands (default)
+                    </button>
 
-            <button
-                onClick={() => {
-                    dispatchManaState(
-                        loadMonoMana()
-                    )
-                }}
-            >
-                Only Mono Lands
-            </button>
 
-            <button
-                onClick={() => {
-                    dispatchManaState(
-                        loadAllyShockMana()
-                    )
-                }}
-            >
-                Ally Shock Lands
-            </button>
+                    <button
+                        className="button--landPacks"
+                        onClick={() => {
+                            dispatchManaState(
+                                loadEnemyMana()
+                            )
+                        }}
+                    >
+                        Enemy Tap Lands
+                    </button>
 
-            <button
-                onClick={() => {
-                    dispatchManaState(
-                        loadEnemyShockMana()
-                    )
-                }}
-            >
-                Enemy Shock Lands
-            </button>
+                    <button
+                        className="button--landPacks"
+                        onClick={() => {
+                            dispatchManaState(
+                                loadMonoMana()
+                            )
+                        }}
+                    >
+                        Mono Lands Only
+                    </button>
+                </div>
+
+
+                <div className="navigation--spacing">
+                    <button
+                        className="button--landPacks"
+                        onClick={() => {
+                            dispatchManaState(
+                                loadAllyShockMana()
+                            )
+                        }}
+                    >
+                        Ally Shock Lands
+                    </button>
+
+                    <button
+                        className="button--landPacks"
+                        onClick={() => {
+                            dispatchManaState(
+                                loadEnemyShockMana()
+                            )
+                        }}
+                    >
+                        Enemy Shock Lands
+                    </button>
+
+                    <button
+                        className="button--landPacks"
+                        onClick={() => {
+                            dispatchManaState(
+                                loadAllShocks()
+                            )
+                        }}
+                    >
+                        Shock Lands Only
+                    </button>
+                </div>
+
+            </div>
+
         </div>
     )
 }

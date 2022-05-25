@@ -27,6 +27,10 @@ export const loadAllyShockMana = () => ({
 export const loadEnemyShockMana = () => ({
     type: 'LOAD_ENEMY_SHOCK_MANA',
 })
+ 
+export const loadAllShocks = () => ({
+    type: 'LOAD_ALL_SHOCKS'
+})
 
 export const nextTurn = () => ({
     type: 'NEXT_TURN'

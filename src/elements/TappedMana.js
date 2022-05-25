@@ -3,35 +3,38 @@ import ManaButton from "./ManaButton";
 
 
 const TappedMana = ({ manaState }) => {
-    const firstRow = manaState.tappedMana.sort((a, b) => a - b).filter(manaPosition => manaPosition < 5)
-    const secondRow = manaState.tappedMana.sort((a, b) => a - b).filter(manaPosition => manaPosition > 4)
+    const firstRow = manaState.tappedMana.sort((a, b) => a - b).slice(0,5)
+    const secondRow = manaState.tappedMana.sort((a, b) => a - b).slice(5)
 
     return (
-        <div>
-            {firstRow.length > 0 &&
+        <div className="manaBoxes--content">
+            <div>
+                {firstRow.length > 0 &&
 
-                firstRow.map(manaPosition => {
+                    firstRow.map(manaPosition => {
 
-                    return <ManaButton
-                        key={manaPosition}
-                        disabled={true}
-                        display={manaPosition}
-                    />
-                })}
+                        return <ManaButton
+                            key={manaPosition}
+                            disabled={true}
+                            display={manaPosition}
+                        />
+                    })}
 
-            <br />
+                <br />
 
-            {secondRow.length > 0 &&
+                {secondRow.length > 0 &&
 
-                secondRow.map(manaPosition => {
+                    secondRow.map(manaPosition => {
 
-                    return <ManaButton
-                        key={manaPosition}
-                        display={manaPosition}
-                        disabled={true}
-                    />
+                        return <ManaButton
+                            key={manaPosition}
+                            display={manaPosition}
+                            disabled={true}
+                        />
 
-                })}
+                    })}
+            </div>
+
         </div>
     )
 }

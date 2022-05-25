@@ -1,6 +1,43 @@
-.mana--button {
+.button--landPacks {
+    background: lighten($light-brown, 5%);
+    border: none;
+    border-bottom: .6rem solid darken($light-brown, 10%);
+    font-weight: bold;
+    margin: $s-size;
+    padding: $s-size;
+}
+
+.button--mana {
     background: none;
     border: none;
-    height: 50rem;
-    width: 50rem;
+    height: 6rem;
+    width: 6rem;
+}
+
+.button--mana:disabled {
+    opacity: .3;
+}
+
+.image--mana {
+    height: 5.9rem;
+    width: 5.9rem;
+}
+
+.button--new {
+    background: $light-green;
+    border: none;
+    border-bottom: .6rem solid darken($light-green, 10%);
+    margin: $s-size;
+    font-weight: bold;
+    padding: $s-size;
+
+}
+
+.button--undo {
+    background: $light-red;
+    border: none;
+    border-bottom: .6rem solid darken($light-red, 10%);
+    font-weight: bold;
+    margin: $s-size;
+    padding: $s-size;
 }

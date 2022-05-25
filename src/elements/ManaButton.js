@@ -4,11 +4,12 @@ import { imageArray } from "../info/manaInfo";
 const ManaButton = ({ takeAction, display, disabled }) => (
     <>
         <button
-            className="mana--button"
+            className="button--mana"
             disabled={disabled}
             onClick={takeAction}
         >
             <img
+                className="image--mana"
                 src={imageArray[display]}
                 height={50}
                 width={50}
@@ -18,3 +19,6 @@ const ManaButton = ({ takeAction, display, disabled }) => (
 )
 
 export default ManaButton
+
+// height={50}
+// width={50}

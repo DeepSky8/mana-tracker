@@ -4,44 +4,47 @@ import ManaButton from "./ManaButton";
 
 
 const AvailableMana = ({ manaState, dispatchManaState }) => {
-    const firstRow = manaState.availableMana.sort((a, b) => a - b).filter(manaPosition => manaPosition < 5)
-    const secondRow = manaState.availableMana.sort((a, b) => a - b).filter(manaPosition => manaPosition > 4)
+    const firstRow = manaState.availableMana.sort((a, b) => a - b).slice(0,5)
+    const secondRow = manaState.availableMana.sort((a, b) => a - b).slice(5)
 
     return (
-        <div>
-            {firstRow.length > 0 &&
+        <div className="manaBoxes--content">
+            <div>
+                {firstRow.length > 0 &&
 
-                firstRow.map(manaPosition => {
-                    return <ManaButton
-                        key={manaPosition}
+                    firstRow.map(manaPosition => {
+                        return <ManaButton
+                            key={manaPosition}
 
-                        display={manaPosition}
-                        takeAction={() => {
-                            if (manaState.availableMana.includes(manaPosition)) {
-                                dispatchManaState(
-                                    tapMana(manaPosition))
-                            }
-                        }}
-                    />
-                })}
+                            display={manaPosition}
+                            takeAction={() => {
+                                if (manaState.availableMana.includes(manaPosition)) {
+                                    dispatchManaState(
+                                        tapMana(manaPosition))
+                                }
+                            }}
+                        />
+                    })}
 
-            <br />
+                <br />
 
-            {secondRow.length > 0 &&
+                {secondRow.length > 0 &&
 
-                secondRow.map(manaPosition => {
-                    return <ManaButton
-                        key={manaPosition}
+                    secondRow.map(manaPosition => {
+                        return <ManaButton
+                            key={manaPosition}
 
-                        display={manaPosition}
-                        takeAction={() => {
-                            if (manaState.availableMana.includes(manaPosition)) {
-                                dispatchManaState(
-                                    tapMana(manaPosition))
-                            }
-                        }}
-                    />
-                })}
+                            display={manaPosition}
+                            takeAction={() => {
+                                if (manaState.availableMana.includes(manaPosition)) {
+                                    dispatchManaState(
+                                        tapMana(manaPosition))
+                                }
+                            }}
+                        />
+                    })}
+            </div>
+
         </div>
     )
 }

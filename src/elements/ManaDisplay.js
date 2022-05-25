@@ -12,17 +12,26 @@ const ManaDisplay = ({ manaState, dispatchManaState }) => {
 
     return (
         <div>
-            Unplayed Mana<br />
+            <div className="manaBoxes--header">
+                <h3>Unplayed Mana</h3>
+            </div>
+
             <UnplayedMana
                 manaState={manaState}
                 dispatchManaState={dispatchManaState}
             />
-            <br />Available Mana<br />
+
+            <div className="manaBoxes--header">
+                <h3>Available Mana</h3>
+            </div>
             <AvailableMana
                 manaState={manaState}
                 dispatchManaState={dispatchManaState}
             />
-            <br />Tapped Mana<br />
+
+            <div className="manaBoxes--header">
+                <h3>Tapped Mana</h3>
+            </div>
             <TappedMana
                 manaState={manaState}
                 dispatchManaState={dispatchManaState}

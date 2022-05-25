@@ -1,6 +1,6 @@
-
-import './App.css';
 import React, { useEffect, useReducer } from 'react';
+import 'normalize.css/normalize.css';
+import './App.scss';
 import ManaDisplay from './elements/ManaDisplay';
 import { manaReducer, defaultManaState } from './reducers/manaReducer';
 import { newGame, untapMana } from './actions/manaStateActions';
@@ -8,52 +8,41 @@ import NextButton from './elements/NextButton';
 import UndoLandPlay from './elements/UndoLandPlay';
 import Footer from './elements/Footer';
 import ManaPackType from './elements/ManaPackType';
+import Header from './elements/Header';
+import GameNavigation from './elements/GameNavigation';
 
 function App() {
   const [manaState, dispatchManaState] = useReducer(manaReducer, defaultManaState)
 
   return (
     <div>
+      <Header dispatchManaState={dispatchManaState} />
+      <div className="content-container">
+        <div className='mainBodyDiv'>
 
-      {!manaState.boxSelected &&
-        <ManaPackType
-          dispatchManaState={dispatchManaState}
-        />
-      }
-      {manaState.boxSelected &&
-        <div>
-          <button onClick={() => {
-            dispatchManaState(newGame())
-          }}
-          >New Game</button>
-
-          <button onClick={() => {
-            dispatchManaState(untapMana())
-          }}
-          >Untap Mana</button>
-
-          <UndoLandPlay
-            manaState={manaState}
-            dispatchManaState={dispatchManaState}
-          />
-
-          <br />
-          <br />
-          <ManaDisplay
-            manaState={manaState}
-            dispatchManaState={dispatchManaState}
-          />
-          <br />
-          <br />
-          <NextButton
-            dispatchManaState={dispatchManaState}
-          />
+          {!manaState.boxSelected &&
+            <ManaPackType
+              dispatchManaState={dispatchManaState}
+            />
+          }
+          {manaState.boxSelected &&
+            <div>
+              <GameNavigation
+                manaState={manaState}
+                dispatchManaState={dispatchManaState}
+              />
+              <ManaDisplay
+                manaState={manaState}
+                dispatchManaState={dispatchManaState}
+              />
+            </div>
+          }
+          <Footer />
         </div>
-      }
-      <br />
-      <br />
-      <Footer />
+      </div>
+
     </div>
+
   );
 }
 

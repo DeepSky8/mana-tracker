@@ -1,0 +1,9 @@
+.manaBoxes--header {
+    background: lighten($light-brown, 5%);
+    font-size: x-large;
+}
+
+.manaBoxes--content {
+    display: flex;
+    justify-content: space-around;
+}

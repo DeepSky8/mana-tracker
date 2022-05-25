@@ -5,6 +5,7 @@ const UndoLandPlay = ({ manaState, dispatchManaState }) => {
 
     return (
         <button
+            className="button--undo"
             disabled={manaState.lastPlayed === null}
             onClick={() => {
                 dispatchManaState(
