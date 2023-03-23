@@ -92,3 +92,29 @@ export const manaList = [
     'wb',
     'wr',
 ]
+
+export const altTextList = [
+    // Untapped Mana
+    'White Mana',
+    'Blue Mana',
+    'Black Mana',
+    'Red Mana',
+    'Green Mana',
+    'White Mana',
+    'Blue Mana',
+    'Black Mana',
+    'Red Mana',
+    'Green Mana',
+    // 5 Allied Tapped Mana
+    'White/Blue Mana',
+    'Blue/Black Mana',
+    'Black/Red Mana',
+    'Red/Green Mana',
+    'White/Green Mana',
+    // 5 Enemy Tapped Mana
+    'Blue/Red Mana',
+    'Blue/Green Mana',
+    'Black/Green Mana',
+    'White/Black Mana',
+    'White/Red Mana',
+]

@@ -7,7 +7,7 @@ const Header = ({ manaState, dispatchManaState }) => (
             <div className="header--spacing">
                 <div>
                     <h1 className="header__title">Mana Tracker</h1>
-                    <h2 className="header__subtitle">Battlebond Land Packs</h2>
+                    <h2 className="header__subtitle">Battlebox Land Packs</h2>
                 </div>
 
                 <div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { imageArray } from "../info/manaInfo";
+import { altTextList, imageArray } from "../info/manaInfo";
 
 const ManaButton = ({ takeAction, display, disabled }) => (
     <>
@@ -11,6 +11,7 @@ const ManaButton = ({ takeAction, display, disabled }) => (
             <img
                 className="image--mana"
                 src={imageArray[display]}
+                alt={altTextList[display]}
                 height={50}
                 width={50}
             />
