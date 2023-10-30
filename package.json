@@ -1,7 +1,7 @@
 {
   "name": "mana-tracker",
   "homepage": "http://mana-tracker.surge.sh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && mv build/index.html build/200.html && surge build"
+    "deploy": "surge build",
+    "copy": "copy index.html 200.html"
   },
   "eslintConfig": {
     "extends": [
