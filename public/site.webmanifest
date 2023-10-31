@@ -57,6 +57,7 @@
             "purpose": "maskable"
         }
     ],
+    "start_url": "https://mana-tracker.surge.sh",
     "theme_color": "#5f5140",
     "background_color": "#5f5140",
     "display": "standalone",
